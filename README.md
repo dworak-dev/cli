@@ -17,7 +17,7 @@ The template includes the following components:
 To use this template, first, clone the repository using the following command:
 
 ```shell
-git clone https://github.com/dworac/typescript-starter.git
+npx @dworac/typescript-template
 ```
 
 After cloning the repository, run the following command to install the dependencies:
