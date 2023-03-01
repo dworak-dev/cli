@@ -6,3 +6,4 @@ jest.config.ts
 .husky/
 migrations/
 docs/
+starter.js

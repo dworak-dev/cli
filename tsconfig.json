@@ -119,6 +119,6 @@
     "coverage",
     ".idea",
     ".husky",
-    "migrations"
+    "migrations",
   ]
 }
