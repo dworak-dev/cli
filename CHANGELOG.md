@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/dworac/typescript-starter/compare/v1.2.0...v1.3.0) (2023-03-01)
+
+
+### Features
+
+* npm publish ([3ac1586](https://github.com/dworac/typescript-starter/commit/3ac15863788f1610a0b5c93dee16edf116c7f735))
+
 ## [1.2.0](https://github.com/dworac/typescript-starter/compare/v1.1.0...v1.2.0) (2023-03-01)
 
 
