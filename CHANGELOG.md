@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/dworac/typescript-starter/compare/v1.0.1...v1.1.0) (2023-03-01)
+
+
+### Features
+
+* added license ([7ad995a](https://github.com/dworac/typescript-starter/commit/7ad995a9a444d9c07d9813bf2418126851bbc93f))
+* updated README.md ([b9b52c4](https://github.com/dworac/typescript-starter/commit/b9b52c45a81ac63bdf1626de1ea8392d4522b908))
+
+
+### Bug Fixes
+
+* pull-request action ([983348e](https://github.com/dworac/typescript-starter/commit/983348ef7743ace052f26bb3a65ac735fb301f80))
+
 ## [1.0.1](https://github.com/dworac/typescript-starter/compare/v1.0.0...v1.0.1) (2023-03-01)
 
 
