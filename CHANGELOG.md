@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/dworac/typescript-starter/compare/v1.4.0...v1.4.1) (2023-03-01)
+
+
+### Bug Fixes
+
+* settings github ([b9f73f8](https://github.com/dworac/typescript-starter/commit/b9f73f80dbba92ada9c281c84ab362553a1a9a82))
+
 ## [1.4.0](https://github.com/dworac/typescript-starter/compare/v1.3.1...v1.4.0) (2023-03-01)
 
 
