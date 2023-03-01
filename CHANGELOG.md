@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/dworac/typescript-starter/compare/v1.1.0...v1.2.0) (2023-03-01)
+
+
+### Features
+
+* starter ([4992a3d](https://github.com/dworac/typescript-starter/commit/4992a3dba0e13be3098ef4caca4534d5cbea10bf))
+
 ## [1.1.0](https://github.com/dworac/typescript-starter/compare/v1.0.1...v1.1.0) (2023-03-01)
 
 
