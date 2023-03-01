@@ -6,7 +6,6 @@ on:
 jobs:
     testing:
       runs-on: ubuntu-latest
-      if: "!contains(github.event.pull_request.labels.*.name, 'autorelease: pending')"
       steps:
         - uses: actions/checkout@v2
         - uses: actions/cache@v2
