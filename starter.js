@@ -110,6 +110,14 @@ const promptUser = () => {
 
     fs.writeFileSync(`${dir}/README.md`, readmeParsed)
 
+    const settings = fs.readFileSync(`${dir}/.github/settings.yml`)
+    const settingsParsed = settings.toString()
+        .replace(/typescript-starter/g, dir)
+        .replace(`description: dworac's typescript most basic template, with esbuild and jest.`, `description: ${description}`)
+        .replace(`homepage: https://github.com/dworac/typescript-starter`, `homepage: ${repository}#readme`);
+
+    fs.writeFileSync(`${dir}/.github/settings.yml`, settingsParsed)
+
 
     process.chdir(dir);
     console.log(chalk.blue('\n********************************'))
