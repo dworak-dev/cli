@@ -17,6 +17,9 @@
   "bin": {
     "typescript-starter": "./starter.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dworac/typescript-starter.git"
