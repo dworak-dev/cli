@@ -2,28 +2,17 @@
 
 This is a simple and lightweight template for creating new TypeScript projects. The repository includes a basic project structure, configuration files, and some useful tools to get started with writing TypeScript code.
 
-## Components
-The template includes the following components:
-
-- `src` directory for source code files
-- `dist` directory for compiled files
-- `index.ts` as the entry point for the application
-- `esbuild` for compiling TypeScript to JavaScript
-- `nodemon` for hot-reloading during development
-- `eslint` for code linting
-- `jest` for testing
 
 ## Usage
-To use this template, first, clone the repository using the following command:
-
+Generate a new template by using the following command in your `repos` folder:
 ```shell
 npx @dworac/typescript-template
 ```
 
-After cloning the repository, run the following command to install the dependencies:
+The npx command will create a new folder with the name of the project and install all dependencies. After the installation is complete, you can start writing your code in the `src` folder.
 
 ```shell
-yarn install
+cd <project-name>
 ```
 You can now start the development server using the following command:
 

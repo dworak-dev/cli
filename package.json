@@ -1,12 +1,18 @@
 {
   "name": "@dworac/typescript-starter",
-  "description": "dworac's typescript most basic template",
+  "description": "dworac's typescript basic template, with esbuild, jest, eslint and prettier.",
   "version": "1.4.1",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "dworac <mail@dworac.com>",
   "license": "MIT",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --sourcemap --minify --external:discord.js --external:chalk --external:typeorm",
+    "build": "yarn clean && yarn esbuild:prod && yarn types",
+    "build:dev": "yarn clean && yarn esbuild:dev",
+    "types": "tsc --declaration --emitDeclarationOnly src/index.ts --outDir dist",
+    "esbuild:dev": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "esbuild:prod": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --sourcemap --minify",
+    "clean": "rimraf dist",
     "start": "node dist/index.js",
     "start:dev": "nodemon",
     "lint": "eslint .",
@@ -41,7 +47,7 @@
     "inquirer": "8.0.0"
   },
   "devDependencies": {
-    "@dworac/eslint-config-typescript": "^1.0.5",
+    "@dworac/eslint-config-typescript": "^1.2.0",
     "@types/jest": "^29.4.0",
     "esbuild": "^0.16.12",
     "esbuild-jest": "^0.5.0",
@@ -49,6 +55,8 @@
     "husky": "^8.0.3",
     "jest": "^29.3.1",
     "nodemon": "^2.0.20",
-    "ts-node": "^10.9.1"
+    "rimraf": "^4.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   }
 }
