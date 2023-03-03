@@ -22,17 +22,21 @@ const questions = [
         name: 'description',
         message: 'What is the description of the project?',
         validate: validateDescription,
+        // optional
+        default: 'A new project',
     },
     {
         type: 'input',
         name: 'repository',
         message: 'What is the repository URL of the project?',
         validate: validateRepoUrl,
+        default: 'https://github.com/dworac/typescript-starter'
     },
     {
         type: 'input',
         name: 'keywords',
         message: 'What are the keywords of the project? (separated by spaces)',
+        default: 'typescript'
     },
 ];
 
@@ -99,6 +103,7 @@ const promptUser = () => {
     packageJsonParsed.keywords = keywords.split(' ')
     packageJsonParsed.bugs.url = `${repository}/issues`
     packageJsonParsed.homepage = `${repository}#readme`
+    packageJsonParsed.dependencies = {}
     delete packageJsonParsed.bin
     console.log(packageJsonParsed)
     fs.writeFileSync(`${dir}/package.json`, JSON.stringify(packageJsonParsed, null, 2))
@@ -114,7 +119,8 @@ const promptUser = () => {
     const settingsParsed = settings.toString()
         .replace(/typescript-starter/g, dir)
         .replace(`description: dworac's typescript most basic template, with esbuild and jest.`, `description: ${description}`)
-        .replace(`homepage: https://github.com/dworac/typescript-starter`, `homepage: ${repository}#readme`);
+        .replace(`homepage: https://github.com/dworac/typescript-starter`, `homepage: ${repository}#readme`)
+        .replace(`topics: node,typescript,template,jest,eslint,prettier,esbuild`, `topics: ${keywords.split(' ').join(',')}`)
 
     fs.writeFileSync(`${dir}/.github/settings.yml`, settingsParsed)
 
