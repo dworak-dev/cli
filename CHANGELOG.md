@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/dworac/typescript-starter/compare/v1.4.1...v1.5.0) (2023-03-03)
+
+
+### Features
+
+* added typescript typing's ([cd11359](https://github.com/dworac/typescript-starter/commit/cd11359b9560fd5ff07890719ad0b87d61fdb5fa))
+
 ## [1.4.1](https://github.com/dworac/typescript-starter/compare/v1.4.0...v1.4.1) (2023-03-01)
 
 

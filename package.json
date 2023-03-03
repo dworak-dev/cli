@@ -1,7 +1,7 @@
 {
   "name": "@dworac/typescript-starter",
   "description": "dworac's typescript basic template, with esbuild, jest, eslint and prettier.",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "dworac <mail@dworac.com>",
