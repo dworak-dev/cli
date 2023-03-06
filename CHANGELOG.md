@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/dworac/cli/compare/v2.0.0...v2.1.0) (2023-03-06)
+
+
+### Features
+
+* added npm pipelines and fixed package.json ([3adec62](https://github.com/dworac/cli/commit/3adec62624c4c95c859662f6595f947bbbc92932))
+
+
+### Bug Fixes
+
+* removed repo as public template ([e6e2ec8](https://github.com/dworac/cli/commit/e6e2ec8775fdcf101209d84e4b6948dc3f84f933))
+
 ## [2.0.0](https://github.com/dworac/typescript-starter/compare/v1.5.0...v2.0.0) (2023-03-06)
 
 
