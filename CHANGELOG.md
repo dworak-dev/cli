@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/dworac/cli/compare/v2.1.2...v2.2.0) (2023-03-06)
+
+
+### Features
+
+* added lib template ([e817976](https://github.com/dworac/cli/commit/e817976fca8fdb20139b50215761bc80a8e02b09))
+
 ## [2.1.2](https://github.com/dworac/cli/compare/v2.1.1...v2.1.2) (2023-03-06)
 
 
