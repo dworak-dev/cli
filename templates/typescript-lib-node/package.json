@@ -4,9 +4,12 @@
   "version": "1.0.0",
   "author": "template.author",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn esbuild:prod",
+    "build": "yarn clean && yarn esbuild:prod && yarn build:types",
     "build:dev": "yarn clean && yarn esbuild:dev",
+    "build:types": "tsc src/index.ts --emitDeclarationOnly --outDir dist/types --declaration",
     "esbuild:dev": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js",
     "esbuild:prod": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --sourcemap --minify",
     "clean": "rimraf dist",
@@ -40,5 +43,8 @@
     "@types/jest": "^29.4.0"
   },
   "dependencies": {
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
