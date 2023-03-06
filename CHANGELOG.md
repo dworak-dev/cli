@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/dworac/cli/compare/v2.1.1...v2.1.2) (2023-03-06)
+
+
+### Bug Fixes
+
+* new project path ([b821a89](https://github.com/dworac/cli/commit/b821a899545c036da63896fcb328e316b293b49a))
+
 ## [2.1.1](https://github.com/dworac/cli/compare/v2.1.0...v2.1.1) (2023-03-06)
 
 
