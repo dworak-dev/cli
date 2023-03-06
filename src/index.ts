@@ -1,18 +1,57 @@
+#!/usr/bin/env node
+
 /**
- * @file index.ts
- * @author dworac <mail@dworac.com
+ * @file src/index.ts
+ * @author dworac <mail@dworac.com>
  *
- * This is the entry point for the application.
+ * Entry point for the CLI.
  */
 
-/**
- * Main function.
- */
-async function main() {
-  // eslint-disable-next-line no-console
-  console.log("Hello world from TypeScript!");
-}
+import chalk from "chalk";
+import { program } from "commander";
+import onGenerate from "./onGenerate";
+import templates from "./templates";
 
-main().catch(() => {
-  process.exit(1);
-});
+const header = `██████╗ ██╗    ██╗ ██████╗ ██████╗  █████╗  ██████╗
+██╔══██╗██║    ██║██╔═══██╗██╔══██╗██╔══██╗██╔════╝
+██║  ██║██║ █╗ ██║██║   ██║██████╔╝███████║██║
+██║  ██║██║███╗██║██║   ██║██╔══██╗██╔══██║██║     
+██████╔╝╚███╔███╔╝╚██████╔╝██║  ██║██║  ██║╚██████╗
+╚═════╝  ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
+    
+    ${chalk.blue("dworac CLI")}`;
+
+program.addHelpText("beforeAll", `\n${chalk.white(header)}\n`);
+
+program
+  .name("@dworac/typescript-starter")
+  .description("CLI to dworac's project generator")
+  .version("1.5.0");
+
+const templateString = templates.join(", ");
+
+program
+  .command("template-generator")
+  .description("Generates a new project from a template")
+  .argument("<name>", `The new project's name`)
+  .option(
+    "-t --template <string>",
+    `The template to use for generating the new project: ${templateString}`
+  )
+  .option("-d, --description <string>", "New project description")
+  .option("-r, --repository <string>", "New project git repository")
+  .option("-k, --keywords <string>", "New project keywords")
+  .option("-a, --author <string>", "New project author")
+  .action(onGenerate);
+
+program
+  .command("templates")
+  .description("Lists all available templates")
+  .action(() => {
+    /* eslint-disable no-console */
+    console.log(`Available templates:`);
+    /* eslint-disable no-console */
+    templates.forEach((template) => console.log(chalk.blue(`- ${template}`)));
+  });
+
+program.parse();

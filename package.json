@@ -1,27 +1,18 @@
 {
-  "name": "@dworac/typescript-starter",
-  "description": "dworac's typescript basic template, with esbuild, jest, eslint and prettier.",
+  "name": "@dworac/cli",
+  "description": "Collection of dworac's CLI tools.",
   "version": "1.5.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "author": "dworac <mail@dworac.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn clean && yarn esbuild:prod && yarn types",
-    "build:dev": "yarn clean && yarn esbuild:dev",
-    "types": "tsc --declaration --emitDeclarationOnly src/index.ts --outDir dist",
-    "esbuild:dev": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js",
-    "esbuild:prod": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --sourcemap --minify",
-    "clean": "rimraf dist",
     "start": "node dist/index.js",
-    "start:dev": "nodemon",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --sourcemap --minify",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky install",
-    "test": "jest"
+    "prepare": "husky install"
   },
   "bin": {
-    "typescript-starter": "./starter.js"
+    "cli": "dist/index.js"
   },
   "publishConfig": {
     "access": "public"
@@ -31,32 +22,31 @@
     "url": "git+https://github.com/dworac/typescript-starter.git"
   },
   "keywords": [
+    "cli",
     "typescript",
-    "starter",
-    "dworac",
-    "esbuild",
-    "jest"
+    "dworac"
   ],
   "bugs": {
     "url": "https://github.com/dworac/typescript-starter/issues"
   },
   "homepage": "https://github.com/dworac/typescript-starter#readme",
   "dependencies": {
+    "@types/command-line-args": "^5.2.0",
+    "@types/command-line-usage": "^5.0.2",
+    "@types/node": "^18.14.6",
     "chalk": "^2.4.2",
+    "command-line-args": "^5.2.1",
+    "command-line-usage": "^6.1.3",
+    "commander": "^10.0.0",
+    "esbuild": "^0.17.11",
     "fs-extra": "^11.1.0",
-    "inquirer": "8.0.0"
+    "inquirer": "8.0.0",
+    "variable-replacer": "^1.6.0"
   },
   "devDependencies": {
     "@dworac/eslint-config-typescript": "^1.2.0",
-    "@types/jest": "^29.4.0",
-    "esbuild": "^0.16.12",
-    "esbuild-jest": "^0.5.0",
     "eslint": "^8.35.0",
     "husky": "^8.0.3",
-    "jest": "^29.3.1",
-    "nodemon": "^2.0.20",
-    "rimraf": "^4.2.0",
-    "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   }
 }
