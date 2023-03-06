@@ -10,7 +10,7 @@ repository:
   description: Collection of dworac's CLI tools.
 
   # Either 'true' or 'false' to make it a template.
-  is_template: true
+  is_template: false
 
   # A URL with more information about the repository
   homepage: https://github.com/dworac/cli
