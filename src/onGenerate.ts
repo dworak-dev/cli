@@ -28,6 +28,9 @@ const onGenerate = (name: string, options: IOptions) => {
   // Template directory
   const templatePath = path.join(__dirname, "..", "templates", template);
 
+  console.log(newProjectPath);
+  console.log(templatePath);
+
   // If new project directory exists, delete it.
   if (fs.existsSync(newProjectPath)) {
     fs.rmSync(newProjectPath, { recursive: true });

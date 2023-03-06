@@ -2,10 +2,10 @@
 
 This is a simple and lightweight template for creating new TypeScript projects. The repository includes a basic project structure, configuration files, and some useful tools to get started with writing TypeScript code.
 
-![npm](https://img.shields.io/npm/v/@dworac/typescript-starter)
-![npm](https://img.shields.io/npm/dw/@dworac/typescript-starter)
-![GitHub issues](https://img.shields.io/github/issues/dworac/typescript-starter)
-![GitHub](https://img.shields.io/github/license/dworac/typescript-starter)
+![npm](https://img.shields.io/npm/v/@dworac/cli)
+![npm](https://img.shields.io/npm/dw/@dworac/cli)
+![GitHub issues](https://img.shields.io/github/issues/dworac/cli)
+![GitHub](https://img.shields.io/github/license/dworac/cli)
 ## Usage
 Generate a new template by using the following command in your `repos` folder:
 ```shell
