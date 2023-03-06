@@ -24,12 +24,9 @@ const onGenerate = (name: string, options: IOptions) => {
   const { template, description, repository, keywords, author } = options;
 
   // New project directory
-  const newProjectPath = path.join(__dirname, "..", name);
+  const newProjectPath = path.join(name);
   // Template directory
   const templatePath = path.join(__dirname, "..", "templates", template);
-
-  console.log(newProjectPath);
-  console.log(templatePath);
 
   // If new project directory exists, delete it.
   if (fs.existsSync(newProjectPath)) {
