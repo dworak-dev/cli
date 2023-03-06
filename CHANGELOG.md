@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/dworac/typescript-starter/compare/v1.5.0...v2.0.0) (2023-03-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* changed from template generator to cli for other purposes.
+
+### Features
+
+* changed from template generator to cli for other purposes. ([1f37646](https://github.com/dworac/typescript-starter/commit/1f376468349ca847eed34803af008596fa07c4d8))
+
+
+### Bug Fixes
+
+* git pipelines using testing instead of linting ([0120124](https://github.com/dworac/typescript-starter/commit/01201240caeb526e2f54899ca742bb4e3d157bef))
+* removed testing from pipelines ([991fdc9](https://github.com/dworac/typescript-starter/commit/991fdc9f34648967f8200c5b133175928c2a4599))
+
 ## [1.5.0](https://github.com/dworac/typescript-starter/compare/v1.4.1...v1.5.0) (2023-03-03)
 
 
