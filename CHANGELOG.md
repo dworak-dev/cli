@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/dworac/cli/compare/v2.1.0...v2.1.1) (2023-03-06)
+
+
+### Bug Fixes
+
+* publish pipeline and added files ([e03d7b7](https://github.com/dworac/cli/commit/e03d7b760db9f428e833fdc1506cd0464f670c4d))
+
 ## [2.1.0](https://github.com/dworac/cli/compare/v2.0.0...v2.1.0) (2023-03-06)
 
 
