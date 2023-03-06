@@ -1,9 +1,0 @@
-dist/
-node_modules/
-coverage/
-.idea/
-jest.config.ts
-.husky/
-migrations/
-docs/
-starter.js
