@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/dworac/cli/compare/v2.2.0...v2.3.0) (2023-03-07)
+
+
+### Features
+
+* logs and commands ([009d68f](https://github.com/dworac/cli/commit/009d68fb10b1b190a323d41558f927f6805793fb))
+
 ## [2.2.0](https://github.com/dworac/cli/compare/v2.1.2...v2.2.0) (2023-03-06)
 
 
