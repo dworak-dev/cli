@@ -7,8 +7,10 @@
 
 /* eslint-disable no-param-reassign */
 /* eslint-disable prefer-destructuring */
+/* eslint-disable no-console */
 import fs from "fs";
 import path from "path";
+import chalk from "chalk";
 import { IOptions } from "./IOptions";
 import templates from "./templates";
 import copyTemplate from "./copyTemplate";
@@ -44,6 +46,21 @@ const onGenerate = (name: string, options: IOptions) => {
     "template.keywords": keywords.split(" ").join(","),
     "template.author": author,
   });
+
+  console.log(`Successfully created new project at ${newProjectPath}`);
+  console.log(`Inside that directory, you can run several commands:\n`);
+
+  console.log(`  ${chalk.cyan("npm start:dev")}`);
+  console.log(`    Starts the development server.\n`);
+
+  console.log(`  ${chalk.cyan("npm build")}`);
+  console.log(`    Bundles the app into static files for production.\n`);
+
+  console.log("We suggest that you begin by typing:");
+  console.log(`  ${chalk.cyan("git init")}`);
+  console.log(`  ${chalk.cyan("yarn")} or ${chalk.cyan("npm i")}`);
+  console.log(`  ${chalk.cyan("cd")} ${name}`);
+  console.log(`  ${chalk.cyan("npm start:dev")}`);
 };
 
 export default onGenerate;

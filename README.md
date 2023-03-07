@@ -1,52 +1,56 @@
-# @dworac/typescript-starter
-
-This is a simple and lightweight template for creating new TypeScript projects. The repository includes a basic project structure, configuration files, and some useful tools to get started with writing TypeScript code.
+# @dworac/cli
 
 ![npm](https://img.shields.io/npm/v/@dworac/cli)
 ![npm](https://img.shields.io/npm/dw/@dworac/cli)
 ![GitHub issues](https://img.shields.io/github/issues/dworac/cli)
 ![GitHub](https://img.shields.io/github/license/dworac/cli)
-## Usage
-Generate a new template by using the following command in your `repos` folder:
-```shell
-npx @dworac/typescript-template
-```
 
-The npx command will create a new folder with the name of the project and install all dependencies. After the installation is complete, you can start writing your code in the `src` folder.
+This is dworac's CLI tool. It is used to create new projects from several templates and more...
+
+# Usage
+This is a command-line tool that generates a new project from a template. You can use it with `npx` or install it globally.
 
 ```shell
-cd <project-name>
+npx @dworac/cli
 ```
-You can now start the development server using the following command:
 
-```sql
-yarn start:dev
-```
-To build the project for production, use the following command:
+## Project generator
+
+To create a new project, run the following command:
 
 ```shell
-yarn build
+npx @dworac/cli template-generator my-project
 ```
-To start the production build, use the following command:
 
-```sql
-yarn start
-```
-To run tests, use the following command:
+### Options
+* -t, --template <string>: The template to use for generating the new project. If not specified, the tool will use a default template.
+* -d, --description <string>: The description of the new project.
+* -r, --repository <string>: The git repository of the new project.
+* -k, --keywords <string>: The keywords of the new project.
+* -a, --author <string>: The author of the new project.
+
+## Examples
+Generate a new project with default options:
 
 ```shell
-yarn test
+npx @dworac/cli template-generator my-project
 ```
 
-## Dependencies
-This repository has the following dependencies:
+Generate a new project with a specific template:
+```shell
+npx @dworac/cli template-generator my-project -t typescript-lib-node
+```
 
-- esbuild: A JavaScript bundler and minifier.
-- jest: A JavaScript testing framework.
-- eslint: A linter for identifying and reporting on patterns found in JavaScript code.
-- nodemon: A utility that monitors changes to the source code and automatically restarts the application.
-- husky: A tool for creating Git hooks.
-- 
+Generate a new project with a description, git repository, keywords, and author:
+```shell
+npx @dworac/cli template-generator my-project -d "My project description" -r "https://github.com/dworac/cli" -k "cli template generator" -a "dworac <mail@dworac.com>"
+```
+
+To list all available templates, run the following command:
+```shell
+npx @dworac/cli templates
+```
+
 ## Contributing
 If you have any suggestions or improvements, please feel free to create a pull request or submit an issue.
 

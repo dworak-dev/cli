@@ -23,15 +23,12 @@ const header = `██████╗ ██╗    ██╗ ██████�
 
 program.addHelpText("beforeAll", `\n${chalk.white(header)}\n`);
 
-program
-  .name("@dworac/typescript-starter")
-  .description("CLI to dworac's project generator")
-  .version("1.5.0");
+program.name("@dworac/typescript-starter").description("dworac's CLI");
 
 const templateString = templates.join(", ");
 
 program
-  .command("template-generator")
+  .command("create")
   .description("Generates a new project from a template")
   .argument("<name>", `The new project's name`)
   .option(
