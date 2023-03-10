@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/dworac/cli/compare/v2.4.0...v2.5.0) (2023-03-10)
+
+
+### Features
+
+* added license to api template README ([1a30976](https://github.com/dworac/cli/commit/1a3097686bb4943ce7eeb19adee11596afc1cbdb))
+
 ## [2.4.0](https://github.com/dworac/cli/compare/v2.3.0...v2.4.0) (2023-03-10)
 
 
