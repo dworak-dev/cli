@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/dworac/cli/compare/v2.3.0...v2.4.0) (2023-03-10)
+
+
+### Features
+
+* api template ([aae7d94](https://github.com/dworac/cli/commit/aae7d9460f611b3c414b9e0532c1e50389c825df))
+
 ## [2.3.0](https://github.com/dworac/cli/compare/v2.2.0...v2.3.0) (2023-03-07)
 
 
