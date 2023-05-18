@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/dworac/cli/compare/v2.5.1...v2.6.0) (2023-05-18)
+
+
+### Features
+
+* added development documentation ([db7170f](https://github.com/dworac/cli/commit/db7170fa11c9c2441311e0e5a92b08de65cfaf78))
+
 ## [2.5.1](https://github.com/dworac/cli/compare/v2.5.0...v2.5.1) (2023-05-18)
 
 
