@@ -53,6 +53,37 @@ Generate a new project with a description, git repository, keywords, and author:
 npx @dworac/cli create my-project typescript-lib-node -d "My project description" -r "https://github.com/dworac/cli" -k "cli template generator" -a "dworac <mail@dworac.com>"
 ```
 
+## Developping
+
+In order to develop this project, you can use the following commands:
+
+Install dependencies:
+```shell
+yarn
+```
+
+Run
+```shell
+yarn start:dev
+```
+
+In order to test the project locally you must build it and link it globally, the following command does both things:
+```shell
+yarn publish:local
+```
+
+To test it run the following command:
+```shell
+npx @dworac/cli
+```
+
+To unlink the project, you can use the following command:
+```shell
+yarn publish:local:unlink
+```
+
+
+
 ## Contributing
 If you have any suggestions or improvements, please feel free to create a pull request or submit an issue.
 
