@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.1](https://github.com/dworac/cli/compare/v2.5.0...v2.5.1) (2023-05-18)
+
+
+### Bug Fixes
+
+* linting ([28e0ff7](https://github.com/dworac/cli/commit/28e0ff7ea2f0fcc2aebee66ac3167e1f773240cc))
+
 ## [2.5.0](https://github.com/dworac/cli/compare/v2.4.0...v2.5.0) (2023-03-10)
 
 
