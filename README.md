@@ -14,41 +14,43 @@ This is a command-line tool that generates a new project from a template. You ca
 npx @dworac/cli
 ```
 
+## Help
+In order to get help, you can use the `--help` flag.
+
+```shell
+npx @dworac/cli --help
+```
+
 ## Project generator
+
+In order to obtain a list of available templates, you can use the `list` command.
+
+```shell
+npx @dworac/cli templates
+```
 
 To create a new project, run the following command:
 
 ```shell
-npx @dworac/cli template-generator my-project
+npx @dworac/cli create <name> <template>
 ```
 
 ### Options
-* -t, --template <string>: The template to use for generating the new project. If not specified, the tool will use a default template.
 * -d, --description <string>: The description of the new project.
 * -r, --repository <string>: The git repository of the new project.
 * -k, --keywords <string>: The keywords of the new project.
 * -a, --author <string>: The author of the new project.
 
 ## Examples
-Generate a new project with default options:
+Generate a new project without options:
 
 ```shell
-npx @dworac/cli template-generator my-project
-```
-
-Generate a new project with a specific template:
-```shell
-npx @dworac/cli template-generator my-project -t typescript-lib-node
+npx @dworac/cli create my-project typescript-lib-node
 ```
 
 Generate a new project with a description, git repository, keywords, and author:
 ```shell
-npx @dworac/cli template-generator my-project -d "My project description" -r "https://github.com/dworac/cli" -k "cli template generator" -a "dworac <mail@dworac.com>"
-```
-
-To list all available templates, run the following command:
-```shell
-npx @dworac/cli templates
+npx @dworac/cli create my-project typescript-lib-node -d "My project description" -r "https://github.com/dworac/cli" -k "cli template generator" -a "dworac <mail@dworac.com>"
 ```
 
 ## Contributing
