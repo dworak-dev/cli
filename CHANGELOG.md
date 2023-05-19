@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.7.0](https://github.com/dworac/cli/compare/v2.6.0...v2.7.0) (2023-05-19)
+
+
+### Features
+
+* templateInfo ([51b3c47](https://github.com/dworac/cli/commit/51b3c47e48070400559b96f76faa67d4b116868e))
+* templates description ([7a92326](https://github.com/dworac/cli/commit/7a923264cf96b6a694ef5a2b329cbd7b84f05e74))
+
 ## [2.6.0](https://github.com/dworac/cli/compare/v2.5.1...v2.6.0) (2023-05-18)
 
 
