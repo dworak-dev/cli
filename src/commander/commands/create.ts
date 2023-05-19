@@ -5,6 +5,9 @@
  *     Create command for the CLI.
  *     This command creates a new project from a template.
  */
+
+/* eslint-disable no-console */
+
 import { Argument, Command } from "commander";
 import path from "path";
 import fs from "fs";
@@ -54,17 +57,30 @@ const onGenerate = (
     /* empty */
   }
 
-  // eslint-disable-next-line no-console
   console.log(
     chalk.green(
       `Successfully created new project at ${chalk.blue(newProjectPath)}\n`
     )
   );
-  // eslint-disable-next-line no-console
   console.log("We suggest that you begin by typing:");
-  // eslint-disable-next-line no-console
   console.log(`  ${chalk.cyan("cd")} ${name}\n`);
-  // eslint-disable-next-line no-console
+
+  // try to get template.json file from template directory
+  const templateJsonPath = path.join(templatePath, "template.json");
+  if (fs.existsSync(templateJsonPath)) {
+    const templateJson = JSON.parse(fs.readFileSync(templateJsonPath, "utf8"));
+
+    templateJson.commands.forEach((command: unknown) => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      const { description: commandDescription, name: commandName } = command;
+      const nameFirstWord = commandName.split(" ")[0];
+      const nameRest = commandName.split(" ").slice(1).join(" ");
+
+      console.log(commandDescription);
+      console.log(`  ${chalk.cyan(nameFirstWord)} ${nameRest}\n`);
+    });
+  }
   console.log(
     `You can find more information at the ${chalk.blue("README.md")} file\n`
   );
