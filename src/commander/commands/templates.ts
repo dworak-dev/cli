@@ -4,19 +4,25 @@
  *
  *     Exports a function that adds the "templates" command to the commander program.
  */
+/* eslint-disable no-console */
 import { Command } from "commander";
 import chalk from "chalk";
-import templates from "../../utils/templates";
+import templatesInfo from "../../utils/templatesInfo";
 
 export default (program: Command) => {
   program
     .command("templates")
     .description("Lists all available templates")
     .action(() => {
-      /* eslint-disable no-console */
       console.log(`\nAvailable templates:\n`);
-      /* eslint-disable no-console */
-      templates.forEach((template) => console.log(chalk.blue(`- ${template}`)));
-      console.log("");
+
+      templatesInfo.forEach((templateInfo) => {
+        console.log(chalk.blue(`- ${templateInfo.name}`));
+        if (templateInfo.description) {
+          console.log(`   ${templateInfo.description}`);
+        }
+      });
+
+      console.log();
     });
 };
