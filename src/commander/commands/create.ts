@@ -7,13 +7,12 @@
  */
 
 /* eslint-disable no-console */
-
 import { Argument, Command } from "commander";
 import path from "path";
 import fs from "fs";
 import chalk from "chalk";
 import { execSync } from "child_process";
-import templates from "../../utils/templates";
+import templatesInfo from "../../utils/templatesInfo";
 import copyTemplate from "../../utils/copyTemplate";
 
 const onGenerate = (
@@ -32,6 +31,8 @@ const onGenerate = (
   const newProjectPath = path.join(name);
   // Template directory
   const templatePath = path.join(__dirname, "..", "templates", template);
+  // Find template from templates list
+  const templateInfo = templatesInfo.find((t) => t.name === template);
 
   // If new project directory exists, delete it.
   if (fs.existsSync(newProjectPath)) {
@@ -65,14 +66,8 @@ const onGenerate = (
   console.log("We suggest that you begin by typing:");
   console.log(`  ${chalk.cyan("cd")} ${name}\n`);
 
-  // try to get template.json file from template directory
-  const templateJsonPath = path.join(templatePath, "template.json");
-  if (fs.existsSync(templateJsonPath)) {
-    const templateJson = JSON.parse(fs.readFileSync(templateJsonPath, "utf8"));
-
-    templateJson.commands.forEach((command: unknown) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+  if (templateInfo?.commands) {
+    templateInfo.commands.forEach((command) => {
       const { description: commandDescription, name: commandName } = command;
       const nameFirstWord = commandName.split(" ")[0];
       const nameRest = commandName.split(" ").slice(1).join(" ");
@@ -81,6 +76,7 @@ const onGenerate = (
       console.log(`  ${chalk.cyan(nameFirstWord)} ${nameRest}\n`);
     });
   }
+
   console.log(
     `You can find more information at the ${chalk.blue("README.md")} file\n`
   );
@@ -93,7 +89,7 @@ export default (program: Command) => {
     .argument("<name>", `The new project's name`)
     .addArgument(
       new Argument("<template>", `The project's template to use.`).choices(
-        templates
+        templatesInfo.map((template) => template.name)
       )
     )
     .option(
