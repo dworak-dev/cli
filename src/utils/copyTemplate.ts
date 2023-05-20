@@ -47,6 +47,11 @@ const copyTemplate = (
         });
       }
 
+      if (file === "gitignore") {
+        // eslint-disable-next-line no-param-reassign
+        file = ".gitignore";
+      }
+
       const writePath = path.join(newProjectPath, file);
       fs.writeFileSync(writePath, contents, "utf8");
     } else if (stats.isDirectory()) {
