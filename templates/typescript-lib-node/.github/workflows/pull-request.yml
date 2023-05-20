@@ -3,6 +3,8 @@ on:
   pull_request:
     branches:
       - master
+permissions:
+  pull-requests: write
 jobs:
     testing:
       runs-on: ubuntu-latest
@@ -30,3 +32,4 @@ jobs:
             - uses: marocchino/sticky-pull-request-comment@v2
               with:
                   message: ${{ steps.coverage.outputs.report }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
