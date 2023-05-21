@@ -47,7 +47,7 @@
     "commander": "^10.0.0",
     "esbuild": "^0.17.11",
     "fs-extra": "^11.1.0",
-    "inquirer": "8.0.0",
+    "inquirer": "^9.2.5",
     "variable-replacer": "^1.6.0"
   },
   "devDependencies": {
