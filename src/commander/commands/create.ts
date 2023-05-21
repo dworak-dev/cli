@@ -12,10 +12,26 @@ import path from "path";
 import fs from "fs";
 import chalk from "chalk";
 import { execSync } from "child_process";
+import inquirer from "inquirer";
 import templatesInfo from "../../utils/templatesInfo";
 import copyTemplate from "../../utils/copyTemplate";
 
-const onGenerate = (
+const inquirerFolderAlreadyExists = async (name: string) => {
+  const { folderAlreadyExists } = await inquirer.prompt([
+    {
+      name: "folderAlreadyExists",
+      type: "confirm",
+      default: false,
+      message: `${chalk.blue(
+        name
+      )} directory already exists. Do you want to overwrite it?`,
+    },
+  ]);
+
+  return folderAlreadyExists;
+};
+
+const onGenerate = async (
   name: string,
   template: string,
   options: {
@@ -36,6 +52,13 @@ const onGenerate = (
 
   // If new project directory exists, delete it.
   if (fs.existsSync(newProjectPath)) {
+    const folderAlreadyExists = await inquirerFolderAlreadyExists(name);
+
+    if (!folderAlreadyExists) {
+      console.log(chalk.red("\nAborting...\n"));
+      return;
+    }
+
     fs.rmSync(newProjectPath, { recursive: true });
   }
 
