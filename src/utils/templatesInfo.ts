@@ -14,6 +14,10 @@ interface TemplateInfo {
     name: string;
     description: string;
   }[];
+  secrets?: {
+    name: string;
+    description: string;
+  }[];
 }
 
 const getTemplatesInfo = (): TemplateInfo[] => {

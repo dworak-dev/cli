@@ -14,5 +14,19 @@
       "name": "yarn build",
       "description": "Build the application"
     }
-  ]
+  ],
+  "secrets": [
+    {
+      "name": "DIGITALOCEAN_APP_NAME",
+      "description": "Name of the digital ocean app the project will be deployed to."
+    },
+    {
+      "name": "DIGITALOCEAN_ACCESS_TOKEN",
+      "description": "Token for Digital Ocean deployment."
+    },
+    {
+      "name": "GITHUB_TOKEN",
+      "description": "This token allows github workflows to publish coverage to any Pull Request made to master and also to allow the release-please workflow to work properly."
+    }
+    ]
 }
