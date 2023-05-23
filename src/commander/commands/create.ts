@@ -77,6 +77,9 @@ const onGenerate = async (
   // if git is installed, initialize new project directory as a git repository
   try {
     execSync("git init", { cwd: newProjectPath });
+    // Create initial commit
+    execSync("git add -A", { cwd: newProjectPath });
+    execSync('git commit -m "feat: initial commit"', { cwd: newProjectPath });
   } catch {
     /* empty */
   }
@@ -101,7 +104,7 @@ const onGenerate = async (
   }
 
   console.log(
-    `You can find more information at the ${chalk.blue("README.md")} file\n`
+    `You can find more information at the ${chalk.blue("README.md")} file`
   );
 };
 
@@ -131,5 +134,18 @@ export default (program: Command) => {
       "New project author",
       "dworac <mail@dworac.com>"
     )
-    .action(onGenerate);
+    .action(onGenerate)
+    .addHelpText(
+      "after",
+      `Examples:
+      
+Generate a new project without options:
+    ${chalk.blue("npx @dworac/cli create my-project typescript-lib-node")}
+    
+Generate a new project with a description, git repository, keywords, and author:
+    ${chalk.blue(
+      `npx @dworac/cli create my-project typescript-lib-node -d "My project description" -r "https://github.com/dworac/cli" -k "cli template generator" -a "dworac <mail@dworac.com>"`
+    )}
+`
+    );
 };
