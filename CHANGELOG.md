@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.8.0](https://github.com/dworac/cli/compare/v2.7.0...v2.8.0) (2023-05-23)
+
+
+### Features
+
+* added token to coverage workflows ([a69eede](https://github.com/dworac/cli/commit/a69eedee7d8b0f4ee12e6f9686aed4e3491631df))
+* erros, help an versioning ([570a50a](https://github.com/dworac/cli/commit/570a50aa84404b709cdf80627276023cc151ffc2))
+* inquirer asks if it's alright to overwrite folder ([dde054b](https://github.com/dworac/cli/commit/dde054b09e6ac8f050be831eb8c9f3754eeec23d))
+
+
+### Bug Fixes
+
+* .gitignore to gitignore ([433dce9](https://github.com/dworac/cli/commit/433dce9094797bb8ac821bc9d83f38b31573349b))
+* add publishconfig to package.json ([4eb8464](https://github.com/dworac/cli/commit/4eb8464b9660681fb92008f8c783b0307a04af35))
+* added file to extra-files in releaseplease ([fb43a20](https://github.com/dworac/cli/commit/fb43a208113d5940b0f88849b6c44df85304629a))
+* renaming if file is gitignore ([57bd88d](https://github.com/dworac/cli/commit/57bd88d9f2008f967521e2dc62f6c33ce481ebd4))
+
 ## [2.7.0](https://github.com/dworac/cli/compare/v2.6.0...v2.7.0) (2023-05-19)
 
 
