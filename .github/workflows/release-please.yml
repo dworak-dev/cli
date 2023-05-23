@@ -18,3 +18,4 @@ jobs:
           token: ${{ secrets.MY_TOKEN }}
           extra-files: |
             src/commander/header.ts
+            src/commander/index.ts  
