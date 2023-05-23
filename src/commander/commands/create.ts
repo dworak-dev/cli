@@ -106,6 +106,20 @@ const onGenerate = async (
   console.log(
     `You can find more information at the ${chalk.blue("README.md")} file`
   );
+
+  if (templateInfo?.secrets) {
+    console.log(
+      chalk.yellow(
+        `\nThis template contains some github workflows which need the following secrets to be added to github.\n`
+      )
+    );
+
+    templateInfo.secrets.forEach((secret) => {
+      const { name: secretName, description: secretDescription } = secret;
+      console.log(secretDescription);
+      console.log(`  ${chalk.cyan(secretName)}\n`);
+    });
+  }
 };
 
 export default (program: Command) => {
