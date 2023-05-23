@@ -16,3 +16,5 @@ jobs:
           release-type: node
           package-name: release-please-action
           token: ${{ secrets.MY_TOKEN }}
+          extra-files: |
+            src/commander/header.ts

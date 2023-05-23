@@ -10,17 +10,11 @@ import header from "./header";
 import commands from "./commands";
 
 export default async () => {
-  program.exitOverride();
   program.addHelpText("beforeAll", `\n${chalk.white(header)}\n`);
+  program.version("0.0.1", "-v"); // x-release-please-version
   program.name("npx @dworac/cli");
+
   commands(program);
 
-  try {
-    await program.parseAsync(process.argv);
-  } catch (err) {
-    if ((err as Error).message !== "(outputHelp)") {
-      // eslint-disable-next-line no-console
-      console.log(err);
-    }
-  }
+  await program.parseAsync();
 };

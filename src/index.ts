@@ -6,6 +6,7 @@
  *
  * Entry point for the CLI.
  */
+import chalk from "chalk";
 import commander from "./commander";
 
 /**
@@ -15,6 +16,8 @@ async function main() {
   await commander();
 }
 
-main().catch(() => {
+main().catch((e) => {
+  // eslint-disable-next-line no-console
+  console.log(chalk.red(e));
   process.exit(1);
 });
