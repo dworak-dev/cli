@@ -43,8 +43,10 @@ const onGenerate = async (
 ) => {
   const { description, repository, keywords, author } = options;
 
+  // The path must be the name provided by the user. If name contains '/' replace them with '-'
+  const dirName = name.replace(/\//g, "-");
   // New project directory
-  const newProjectPath = path.join(name);
+  const newProjectPath = path.join(dirName);
   // Template directory
   const templatePath = path.join(__dirname, "..", "templates", template);
   // Find template from templates list
