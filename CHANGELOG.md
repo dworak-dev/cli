@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.9.0](https://github.com/dworac/cli/compare/v2.8.0...v2.9.0) (2023-05-24)
+
+
+### Features
+
+* added support on template.json for github secrets ([643fccd](https://github.com/dworac/cli/commit/643fccd386543134e3cfa1c862f7cf3fde5301ac))
+* folder name with - instead of / to avoid having a nested folder ([1fc303e](https://github.com/dworac/cli/commit/1fc303e78a33e01ea1b5189e7d8725a0e0b3f400))
+
 ## [2.8.0](https://github.com/dworac/cli/compare/v2.7.0...v2.8.0) (2023-05-23)
 
 
