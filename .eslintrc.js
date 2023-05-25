@@ -12,6 +12,6 @@ module.exports = {
     "coverage/*",
     ".husky/*",
     ".github/*",
-    "templates/*",
+    "templates/**/*",
   ],
 };
