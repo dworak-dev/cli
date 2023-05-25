@@ -5,18 +5,18 @@
  * This is the entry point for the application.
  */
 
+import Logger from "@dworac/logger";
 import sum from "./sum";
 
 /**
  * Main function.
  */
 async function main() {
-  // eslint-disable-next-line no-console
-  console.log("Hello world from TypeScript!");
-  // eslint-disable-next-line no-console
-  console.log("1 + 1 = ", sum(1, 1));
+  const res = sum(1, 2);
+  Logger.logInfo(`1 + 2 = ${res}`);
 }
 
-main().catch(() => {
+main().catch((e) => {
+  Logger.logError(e);
   process.exit(1);
 });
