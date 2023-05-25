@@ -18,6 +18,13 @@
     eslint-plugin-prettier "^4.2.1"
     prettier "^2.8.1"
 
+"@dworac/logger@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@dworac/logger/-/logger-1.1.0.tgz#a7d89f37dd8fa743d4b94a76b17f435f386ea2d0"
+  integrity sha512-VNZDyYPSo3mQIENgFYSwf21uWqHgdlpTKBu3aBjvISloF95D2l0+IzkOFDWW4y3d9AG45lU5kJwU/uU90ERZkg==
+  dependencies:
+    chalk "^2.4.2"
+
 "@es-joy/jsdoccomment@~0.36.1":
   version "0.36.1"
   resolved "https://registry.npmjs.org/@es-joy/jsdoccomment/-/jsdoccomment-0.36.1.tgz"

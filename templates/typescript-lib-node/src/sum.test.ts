@@ -4,11 +4,11 @@
  *
  * This file contains the unit testing for the sum function.
  */
-import sum from "./sum";
+import { sum } from "./sum";
 
 test("sum", () => {
-  expect(sum(1, 2)).toBe(3);
-  expect(sum(1, 2)).not.toBe(4);
-  expect(sum(-1, 2)).toBe(1);
-  expect(sum(-1, -5)).toBe(-6);
+  expect(sum({ a: 1, b: 2 })).toBe(3);
+  expect(sum({ a: 1, b: 3 })).not.toBe(-2);
+  expect(sum({ a: -2, b: 3 })).toBe(1);
+  expect(sum({ a: -2, b: -4 })).toBe(-6);
 });

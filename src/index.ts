@@ -6,7 +6,7 @@
  *
  * Entry point for the CLI.
  */
-import chalk from "chalk";
+import Logger from "@dworac/logger";
 import commander from "./commander";
 
 /**
@@ -17,7 +17,6 @@ async function main() {
 }
 
 main().catch((e) => {
-  // eslint-disable-next-line no-console
-  console.log(chalk.red(e));
+  Logger.logError(e);
   process.exit(1);
 });
