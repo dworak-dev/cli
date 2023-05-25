@@ -32,4 +32,4 @@ jobs:
             - uses: marocchino/sticky-pull-request-comment@v2
               with:
                   message: ${{ steps.coverage.outputs.report }}
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
