@@ -25,7 +25,7 @@
       "description": "Token for Digital Ocean deployment."
     },
     {
-      "name": "GITHUB_TOKEN",
+      "name": "GH_TOKEN",
       "description": "This token allows github workflows to publish coverage to any Pull Request made to master and also to allow the release-please workflow to work properly."
     }
     ]
