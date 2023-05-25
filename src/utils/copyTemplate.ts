@@ -20,6 +20,8 @@ const foldersToIgnore = [
   "dist",
 ];
 
+const filesToIgnore = ["template.json"];
+
 /**
  * @param {string} templatePath - Path to template directory
  * @param {string} newProjectPath - Path to new project directory
@@ -39,6 +41,9 @@ const copyTemplate = (
     const stats = fs.statSync(origFilePath);
 
     if (stats.isFile()) {
+      if (filesToIgnore.includes(file)) {
+        return;
+      }
       let contents = fs.readFileSync(origFilePath, "utf8");
 
       if (toReplace) {
