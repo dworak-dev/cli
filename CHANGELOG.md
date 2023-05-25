@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.10.0](https://github.com/dworac/cli/compare/v2.9.0...v2.10.0) (2023-05-25)
+
+
+### Features
+
+* added README.md to worker template and logger support in general ([b2748fd](https://github.com/dworac/cli/commit/b2748fd655763c101423354c4d4b67777c4cac3b))
+* don't copy template.json ([53e3b42](https://github.com/dworac/cli/commit/53e3b42c5636522dcd3e86c9a0337cd2d8c4a9a5))
+
+
+### Bug Fixes
+
+* changed GITHUB_TOKEN to GH_TOKEN ([4b60de2](https://github.com/dworac/cli/commit/4b60de2e10d2deac6e73c2b3cb6a7f88a3284d7e))
+* string replacement escape ([209c3cc](https://github.com/dworac/cli/commit/209c3cc90ab8ed3e758b282af1f06f4ee3ff4c33))
+
 ## [2.9.0](https://github.com/dworac/cli/compare/v2.8.0...v2.9.0) (2023-05-24)
 
 
