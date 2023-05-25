@@ -1,4 +1,4 @@
-# Template.Name
+# template.name
 
 This is a template repository for quickly starting a Node.js library project with TypeScript, ESLint, Jest, and a host of other tools set up out of the box. It's designed to help you hit the ground running, providing a solid base from which you can begin developing your project.
 

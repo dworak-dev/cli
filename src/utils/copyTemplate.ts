@@ -8,7 +8,8 @@ import fs from "fs";
 import path from "path";
 
 const replaceString = (original: string, search: string, replace: string) => {
-  return original.replace(new RegExp(search, "g"), replace);
+  const escapedSearch = search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return original.replace(new RegExp(escapedSearch, "g"), replace);
 };
 
 const foldersToIgnore = [
