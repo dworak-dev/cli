@@ -82,10 +82,58 @@ To unlink the project, you can use the following command:
 yarn publish:local:unlink
 ```
 
-
-
 ## Contributing
 If you have any suggestions or improvements, please feel free to create a pull request or submit an issue.
+
+### Add a template
+
+Adding a new template is very simple:
+
+- Create a new folder with the name of the template in the `templates` folder.
+- Add a template.json file to your template folder
+- If you have any `.gitignore` files rename them to `gitignore`
+
+#### template.json
+
+`template.json` file should be in each one of the templates folder and it should look something like this.
+
+```json
+{
+  "name": "typescript-api",
+  "description": "This template is used to create an express server with typescript, grahpql, typeorm, and postgres.",
+  "commands": [
+    {
+      "name": "yarn",
+      "description": "Install dependencies"
+    }
+  ],
+  "secrets": [
+    {
+      "name": "DIGITALOCEAN_APP_NAME",
+      "description": "Name of the digital ocean app the project will be deployed to."
+    }
+  ]
+}
+```
+
+This file helps document the template for the cli's output.
+All of the properties are optional but recommended: 
+
+```typescript
+interface TemplateInfo {
+    name: string;
+    description?: string;
+    commands?: {
+        name: string;
+        description: string;
+    }[]; // Recommended commands, starter commands.
+    secrets?: {
+        name: string;
+        description: string;
+    }[]; // Secrets needed for github workflows to work.
+}
+```
+
 
 ## License
 This project is licensed under the MIT license. Please see the LICENSE file for more information.
