@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.1](https://github.com/dworac/cli/compare/v2.10.0...v2.10.1) (2023-05-26)
+
+
+### Bug Fixes
+
+* added more information to api template README.md ([b783bc0](https://github.com/dworac/cli/commit/b783bc0477c88916362d99462383ea99565e8f43))
+
 ## [2.10.0](https://github.com/dworac/cli/compare/v2.9.0...v2.10.0) (2023-05-25)
 
 
