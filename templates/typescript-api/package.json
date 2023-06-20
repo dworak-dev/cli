@@ -27,7 +27,7 @@
     "depcheck": "depcheck"
   },
   "dependencies": {
-    "@apollo/server": "^4.3.3",
+    "@apollo/server": "^4.7.4",
     "@apollo/server-plugin-landing-page-graphql-playground": "^4.0.0",
     "@dworac/eslint-config-typescript": "^1.2.0",
     "@types/cors": "^2.8.13",
