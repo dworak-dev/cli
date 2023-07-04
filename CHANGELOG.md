@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.2](https://github.com/dworac/cli/compare/v2.10.1...v2.10.2) (2023-07-04)
+
+
+### Bug Fixes
+
+* Update README.md ([d091b63](https://github.com/dworac/cli/commit/d091b63d9f3921133014b83a4e542e60ed4279c5))
+
 ## [2.10.1](https://github.com/dworac/cli/compare/v2.10.0...v2.10.1) (2023-05-26)
 
 

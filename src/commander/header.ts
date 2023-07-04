@@ -6,7 +6,7 @@
  */
 import chalk from "chalk";
 
-const v = `v2.10.1`; // x-release-please-version
+const v = `v2.10.2`; // x-release-please-version
 
 const header = `██████╗ ██╗    ██╗ ██████╗ ██████╗  █████╗  ██████╗
 ██╔══██╗██║    ██║██╔═══██╗██╔══██╗██╔══██╗██╔════╝
