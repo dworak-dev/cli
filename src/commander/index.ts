@@ -11,7 +11,7 @@ import commands from "./commands";
 
 export default async () => {
   program.addHelpText("beforeAll", `\n${chalk.white(header)}\n`);
-  program.version("2.10.1", "-v"); // x-release-please-version
+  program.version("2.10.2", "-v"); // x-release-please-version
   program.name("npx @dworac/cli");
 
   commands(program);

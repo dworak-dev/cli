@@ -1,7 +1,7 @@
 {
   "name": "@dworac/cli",
   "description": "Collection of dworac's CLI tools.",
-  "version": "2.10.1",
+  "version": "2.10.2",
   "author": "dworac <mail@dworac.com>",
   "license": "MIT",
   "scripts": {
