@@ -5,7 +5,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/dworac/cli)
 ![GitHub](https://img.shields.io/github/license/dworac/cli)
 
-This is dworac's CLI tool. It is used to create new projects from several templates and more...
+This is dworac's CLI tool. It is used to create new projects from several templates and more....
 
 # Usage
 This is a command-line tool that generates a new project from a template. You can use it with `npx` or install it globally.
